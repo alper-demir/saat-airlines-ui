@@ -1,0 +1,90 @@
+<div class="pb-10">
+    <div class="flex justify-between">
+        <div>
+            <p class="text-2xl mb-4">{{title}}</p>
+        </div>
+        <div>
+            <button class="bg-indigo-600 p-2 rounded text-white hover:bg-opacity-90">New Flight</button>
+        </div>
+    </div>
+
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                    <th scope="col" class="px-6 py-3">
+                        Flight Number
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Source Airport
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Destination Airport
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Route (Id)
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Distance (miles)
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Price
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Date
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Arrival Time
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Capacity
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Status
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        <span class="sr-only">Edit</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700" *ngFor="let flight of flightList">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        {{flight.flightNumber}}
+                    </th>
+                    <td class="px-6 py-4">
+                        {{flight.route.source.name}} <p>{{flight.route.source.city}}/{{flight.route.source.country}}</p>
+                    </td>
+                    <td class="px-6 py-4">
+                        {{flight.route.destination.name}}
+                        <p> {{flight.route.destination.city}}/{{flight.route.destination.country}}</p>
+                    </td>
+                    <td class="px-6 py-4">
+                        {{flight.id}}
+                    </td>
+                    <td class="px-6 py-4">
+                        {{flight.route.distanceInMiles}}
+                    </td>
+                    <td class="px-6 py-4">
+                        {{flight.price}}
+                    </td>
+                    <td class="px-6 py-4">
+                        {{ flight.date.split('-').join('/') }}
+                    </td>
+                    <td class="px-6 py-4">
+                        {{flight.arrivalTime}}
+                    </td>
+                    <td class="px-6 py-4">
+                        {{flight.capacity}}
+                    </td>
+                    <td class="px-6 py-4">
+                        {{flight.status}}
+                    </td>
+                    <td class="px-6 py-4 text-right">
+                        <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
