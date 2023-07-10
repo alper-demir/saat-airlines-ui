@@ -1,10 +1,10 @@
-<h2 mat-dialog-title>Add new airport</h2>
+<h2 mat-dialog-title>Edit Airport</h2>
 <mat-dialog-content class="mat-typography">
-
-    <form class="w-80" [formGroup]="frm" (ngSubmit)="onSubmit()">
+    <p>{{airport.name}}</p>
+    <form class="w-80" [formGroup]="frm">
         <div class="mb-6">
             <label for="airportName" class="block mb-2 text-sm font-medium text-gray-900">Airport name</label>
-            <input type="email" id="airportName"
+            <input type="text" id="airportName"
                 class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                 required formControlName="airportName">
         </div>
@@ -30,10 +30,14 @@
                 <option value="{{city}}" *ngFor="let city of cityList">{{city}}</option>
             </select>
         </div>
-        <div class="text-end">
-            <button type="submit" mat-button mat-dialog-close [disabled]="!frm.valid"
+        <div class="flex justify-between">
+            <button type="submit" mat-button mat-dialog-close (click)="deleteAirport()"
+                class="text-white bg-red-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 disabled:opacity-50">
+                Delete
+            </button>
+            <button type="submit" mat-button mat-dialog-close [disabled]="!frm.valid" (click)="changeAirport()"
                 class="text-white bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 disabled:opacity-50">
-                Add Airport
+                Change Info
             </button>
         </div>
     </form>
