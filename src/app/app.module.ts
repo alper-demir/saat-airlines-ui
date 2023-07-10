@@ -12,6 +12,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NewAirportModalComponent } from './components/new-airport-modal/new-airport-modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EditAirportModalComponent } from './components/edit-airport-modal/edit-airport-modal.component';
+import { NewRouteModalComponent } from './components/new-route-modal/new-route-modal.component';
+import { EditRouteModalComponent } from './components/edit-route-modal/edit-route-modal.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     NavbarComponent,
     NewAirportModalComponent,
+    EditAirportModalComponent,
+    NewRouteModalComponent,
+    EditRouteModalComponent,
   ],
   imports: [
     BrowserModule,

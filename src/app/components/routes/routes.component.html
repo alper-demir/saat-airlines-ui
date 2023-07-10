@@ -4,7 +4,8 @@
             <p class="text-2xl mb-4">{{title}}</p>
         </div>
         <div>
-            <button class="bg-indigo-600 p-2 rounded text-white hover:bg-opacity-90">New Route</button>
+            <button class="bg-indigo-600 p-2 rounded text-white hover:bg-opacity-90" (click)="openAddRouteModal()">New
+                Route</button>
         </div>
     </div>
 
@@ -74,7 +75,8 @@
                         {{route.destination.country}}
                     </td>
                     <td class="px-6 py-4 text-right">
-                        <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                        <button class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                            (click)="openEditRouteModal(route)">Edit</button>
                     </td>
                 </tr>
             </tbody>
