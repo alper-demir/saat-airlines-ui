@@ -15,6 +15,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditAirportModalComponent } from './components/edit-airport-modal/edit-airport-modal.component';
 import { NewRouteModalComponent } from './components/new-route-modal/new-route-modal.component';
 import { EditRouteModalComponent } from './components/edit-route-modal/edit-route-modal.component';
+import { NewFlightModalComponent } from './components/new-flight-modal/new-flight-modal.component';
+import { EditFlightModalComponent } from './components/edit-flight-modal/edit-flight-modal.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { EditRouteModalComponent } from './components/edit-route-modal/edit-rout
     EditAirportModalComponent,
     NewRouteModalComponent,
     EditRouteModalComponent,
+    NewFlightModalComponent,
+    EditFlightModalComponent,
   ],
   imports: [
     BrowserModule,
