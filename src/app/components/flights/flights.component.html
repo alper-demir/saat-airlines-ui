@@ -35,6 +35,9 @@
                         Date
                     </th>
                     <th scope="col" class="px-6 py-3">
+                        Departure Time
+                    </th>
+                    <th scope="col" class="px-6 py-3">
                         Arrival Time
                     </th>
                     <th scope="col" class="px-6 py-3">
@@ -71,6 +74,9 @@
                     </td>
                     <td class="px-6 py-4">
                         {{ flight.date.split('-').join('/') }}
+                    </td>
+                    <td class="px-6 py-4">
+                        {{flight.departureTime}}
                     </td>
                     <td class="px-6 py-4">
                         {{flight.arrivalTime}}

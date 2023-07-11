@@ -17,6 +17,7 @@ export class NewFlightModalComponent {
       route: [""],
       price: [""],
       date: [""],
+      departureTime: [""],
       arrivalTime: [""],
       capacity: [""],
       status: [""],
@@ -32,12 +33,13 @@ export class NewFlightModalComponent {
   async onSubmit() {
     const confirmFlight = window.confirm("Are you sure to add new flight?");
     if (confirmFlight) {
-      const { flightNumber, route, price, date, arrivalTime, capacity, status } = this.frm.value;
+      const { flightNumber, route, price, date, departureTime, arrivalTime, capacity, status } = this.frm.value;
       axios.post("http://localhost:8080/api/flights/add", {
         flightNumber,
         route,
         price,
         date,
+        departureTime,
         arrivalTime,
         capacity,
         status,

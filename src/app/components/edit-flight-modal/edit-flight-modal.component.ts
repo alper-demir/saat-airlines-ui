@@ -20,12 +20,13 @@ export class EditFlightModalComponent {
     this.getRouteList();
     console.log(data);
     this.flight = data;
-
+    
     this.frm = formBuilder.group({
       flightNumber: [data.flightNumber],
       route: [data.route.id],
       price: [data.price],
       date: [data.date],
+      departureTime: [data.departureTime],
       arrivalTime: [data.arrivalTime],
       capacity: [data.capacity],
       status: [data.status],
@@ -55,13 +56,14 @@ export class EditFlightModalComponent {
   async changeFlight() {
     const confirmChange = window.confirm("Are you sure change flight?");
     if (confirmChange) {
-      const { flightNumber, route, price, date, arrivalTime, capacity, status } = this.frm.value;
+      const { flightNumber, route, price, date, departureTime, arrivalTime, capacity, status } = this.frm.value;
       axios.put("http://localhost:8080/api/flights", {
         id: this.flight.id,
         flightNumber,
         route,
         price,
         date,
+        departureTime,
         arrivalTime,
         capacity,
         status
