@@ -17,6 +17,7 @@ import { NewRouteModalComponent } from './components/new-route-modal/new-route-m
 import { EditRouteModalComponent } from './components/edit-route-modal/edit-route-modal.component';
 import { NewFlightModalComponent } from './components/new-flight-modal/new-flight-modal.component';
 import { EditFlightModalComponent } from './components/edit-flight-modal/edit-flight-modal.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { EditFlightModalComponent } from './components/edit-flight-modal/edit-fl
     EditRouteModalComponent,
     NewFlightModalComponent,
     EditFlightModalComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
